@@ -19,9 +19,9 @@ app.use(express.json());
 
 app.use('/api/v1', apiRoutes);
 
-// app.use('/', (req, res) => {
-//     res.send('Welcome to News API');
-// });
+app.use('/api/v1/', (req, res) => {
+    res.send('Welcome to News API');
+});
 
 
 const PORT = process.env.PORT || 5000;
