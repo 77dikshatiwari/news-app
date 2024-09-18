@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
-// app.use('/api/v1', apiRoutes);
+app.use('/api/v1', apiRoutes);
 
 app.use('/api/v1/', (req, res) => {
     res.send('Welcome to News API');
