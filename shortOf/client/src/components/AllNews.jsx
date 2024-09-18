@@ -23,7 +23,7 @@ const AllNews = () => {
     setIsLoading(true);
     setError(null);
     fetch(
-      `http://localhost:3000/api/v1/all-news?page=${page}&pageSize=${pageSize}`
+      `https://news-app-nine-flax.vercel.app/api/v1/all-news?page=${page}&pageSize=${pageSize}`
     )
       .then((response) => {
         if (response.ok) {

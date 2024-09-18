@@ -24,7 +24,7 @@ const TopHeadlines = () => {
         setIsLoading(true);
         setError(null);
         const categoryParams = params.category ?`&category=${params.category}` : ''
-        fetch(`http://localhost:3000/api/v1/top-headlines?language=en${categoryParams}&page=${page}&pageSize=${pageSize}`)
+        fetch(`https://news-app-nine-flax.vercel.app/api/v1/top-headlines?language=en${categoryParams}&page=${page}&pageSize=${pageSize}`)
         .then((response) => {
             if(response.ok){
                 setIsLoading(true)

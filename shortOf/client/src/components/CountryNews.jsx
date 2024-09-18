@@ -23,7 +23,7 @@ const CountryNews = () => {
     useEffect(()=>{
         setIsLoading(true);
         setError(null);
-        fetch(`http://localhost:3000/api/v1/country/${params.iso}?page=${page}&pageSize=${pageSize}`)
+        fetch(`https://news-app-nine-flax.vercel.app/api/v1/country/${params.iso}?page=${page}&pageSize=${pageSize}`)
         .then(response => {
             if(response.ok){
             setIsLoading(true)
