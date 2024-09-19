@@ -27,7 +27,7 @@ const AllNews = () => {
     )
       .then((response) => {
         if (response.ok) {
-          console.log(response);
+          // console.log(response);
           return response.json();
         }
         throw new Error(
@@ -38,13 +38,13 @@ const AllNews = () => {
         if (myJsonData.success) {
           setTotalResults(myJsonData.data.totalResults);
           setData(myJsonData.data.articles);
-          console.log(myJsonData.data.articles);
+          // console.log(myJsonData.data.articles);
         } else {
           setError("Something went wrong, there is network response error");
         }
       })
       .catch((error) => {
-        console.error(`Fetch Error: ${error}`);
+        // console.error(`Fetch Error: ${error}`);
         setError(
           `Failed to fetch news news. ${error.message ||"Unknown error occured"}, Please try again later`
         );

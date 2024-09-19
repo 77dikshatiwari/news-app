@@ -38,30 +38,30 @@ const LiveNews = () => {
               );
             })
             .then((myJsonData) => {
-                console.log("fetched data",myJsonData);
+                // console.log("fetched data",myJsonData);
               if (myJsonData.success) {
                 const paginationTotal = myJsonData.data.pagination ? myJsonData.data.pagination.total : 0;
                 setTotalResults(paginationTotal);
-                console.log("pagination:",paginationTotal)
+                // console.log("pagination:",paginationTotal)
                 setData(myJsonData.data);
-                console.log("fetched dataset",myJsonData.data);
-                console.log("state data", data);
+                // console.log("fetched dataset",myJsonData.data);
+                // console.log("state data", data);
               } else {
                 setError("Something went wrong, there is a network response error");
               }
             })
             .catch((error) => {
-              console.error(`Fetch Error: ${error}`);
+              // console.error(`Fetch Error: ${error}`);
               setError(
                 `Failed to fetch live news. ${error.message || "Unknown error occurred"}, please try again later.`
               );
             })
             .finally(() => {
               setIsLoading(false);
-              console.log("Data fetched successfully");
+              // console.log("Data fetched successfully");
             });
         }, [page]);
-        console.log("Component data",data);
+        // console.log("Component data",data);
       
         return (
           <>
